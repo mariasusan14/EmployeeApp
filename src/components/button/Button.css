@@ -1,0 +1,26 @@
+button {
+    background-color: #03AEEE;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    height: fit-content;
+    width: fit-content;
+    padding: 15px 25px;
+}
+
+.create{
+
+border-radius: 5px;
+color: white;
+background-color: #03AEEE;
+}
+
+.cancel{
+    background-color: white;
+    color: rgb(121, 118, 118);
+    border-radius: 5px;
+    border: 2px solid rgb(233, 231, 231);
+}

@@ -1,0 +1,19 @@
+input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(196, 195, 195);
+}
+
+.inputWrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 10%;
+    margin-top: 0px;
+    width: 100%;
+}
+
+
+

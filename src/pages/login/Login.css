@@ -1,0 +1,112 @@
+
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+ box-sizing: border-box;
+}
+
+.leftcont{
+    background-color: #e6f7fd;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.circle{
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+}
+.rightcont{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+   height: 100vh;
+}
+.login{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    
+}
+
+.rightcont >.form{
+    width: 50%;
+    box-shadow: none;
+}
+
+.username-transition{
+    position: absolute;
+    top: 21%;
+    left: 10px;
+    background-color: white;
+    padding: 2px;
+    color: #03AEEE;
+    font-size: small;
+}
+
+.username-input-wrapper{
+    margin-top: 20px;
+    
+}
+.login .inputWrapper{
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+}
+
+.errormsg{
+    font-size: small;
+    color: red;
+    padding: 0;
+    margin: 0%;
+}
+
+.checkbx{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.checkbx >.inputWrapper{
+    margin: 0%;
+    padding: 0%;
+    max-width: fit-content;
+}
+
+.checkbx >p{
+   font-size: medium;
+   margin: 0;
+}
+.login .clear{
+    color: black;
+    font-weight: normal;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid rgb(189, 186, 186);
+background-color: rgb(235, 233, 233);
+padding: 10px 10px;
+}
+

@@ -1,0 +1,50 @@
+
+.list{
+    margin-top: 20px;
+    margin-left: 30px;
+    border-radius: 10px;
+   padding: 0%;
+}
+
+tr{
+    box-shadow: 0px 2px 4px rgb(224, 222, 222);
+    border-radius: 10px;
+}
+td{
+text-align: center;
+vertical-align: middle;
+height: fit-content;
+width: fit-content;
+padding: 20px;
+}
+th{
+    text-align: center;
+vertical-align: middle;
+   background-color: #EAF9FF;
+    padding: 2%;
+}
+
+table{
+    border-collapse: separate;
+    border-spacing: 0px 16px;
+    padding: 1%;
+}
+
+.startcol{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.endcol{
+       border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+ .fa{
+    margin-left: 20px;
+ }
+
+
+.status-container{
+    display: flex;
+    justify-content: center;   
+}

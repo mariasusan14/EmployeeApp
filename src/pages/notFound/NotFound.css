@@ -1,0 +1,24 @@
+.not-found-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.not-found-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.return-home-btn{
+     background-color: #03AEEE;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    height: fit-content;
+    width: fit-content;
+    padding: 15px 25px;
+}
