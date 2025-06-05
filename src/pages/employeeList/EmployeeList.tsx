@@ -9,7 +9,7 @@ import type { Employee,} from "../../api-service/employees/types"
 //import { useAppSelector, type RootState } from "../../store/store";
 import { useGetEmployeesQuery } from "../../api-service/employees/employees.api";
 
-export const EmployeeList = () => {
+const EmployeeList = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const selectedStatus = searchParams.get("status");
   //const employeesArr:Employee[] = useAppSelector((state: RootState) => state.employee.employees);
@@ -66,3 +66,4 @@ export const EmployeeList = () => {
     </>
   );
 };
+export default EmployeeList

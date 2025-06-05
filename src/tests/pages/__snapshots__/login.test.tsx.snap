@@ -55,7 +55,7 @@ exports[`Login Page > should match snapshot 1`] = `
                   name="username"
                   placeholder="username"
                   required=""
-                  type="text"
+                  type="email"
                   value=""
                 />
                 <button
@@ -90,6 +90,9 @@ exports[`Login Page > should match snapshot 1`] = `
               />
             </div>
           </div>
+          <p
+            class="errormsg"
+          />
           <div
             class="checkbx"
           >
@@ -112,6 +115,7 @@ exports[`Login Page > should match snapshot 1`] = `
           </div>
           <button
             class="button button--primary login-button"
+            disabled=""
             type="button"
           >
             Login

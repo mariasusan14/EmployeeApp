@@ -1,66 +1,66 @@
-.createEmployee>.endadornment{
-display: flex;
-flex-direction: row;
-margin-left: auto;
+.createEmployee > .endadornment {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
 }
 
-.create-emp-nav{
-display: flex;
-flex-direction: row;
-background-color: #EAF9FF;
-width: fit-content;
-height: 35px;
-border-radius: 40px;
-align-items: center;
+.create-emp-nav {
+  display: flex;
+  flex-direction: row;
+  background-color: #eaf9ff;
+  width: fit-content;
+  height: 35px;
+  border-radius: 40px;
+  align-items: center;
 }
 
-.emp-nav-btn{
-background-color: #03AEEE;
-color: white;
-font-size: large;
-width: 35px;
-height: 35px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
+.emp-nav-btn {
+  background-color: #03aeee;
+  color: white;
+  font-size: large;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.create-emp-nav>p{
-    font-size: medium;
-    font-weight: lighter;
-    padding-left: 7px;
-    padding-right: 15px;
-    margin: 0%;
-    color: black;
+.create-emp-nav > p {
+  font-size: medium;
+  font-weight: lighter;
+  padding-left: 7px;
+  padding-right: 15px;
+  margin: 0%;
+  color: black;
 }
 
-.status-filter{
-    display: flex;
-    margin-right: 30px;
-    font-weight: lighter;
-    font-size: medium;
+.status-filter {
+  display: flex;
+  margin-right: 30px;
+  font-weight: lighter;
+  font-size: medium;
 }
 
-.status-filter>p{
-    width: 100px;
-    text-align: center;
-   margin-top: auto;
-   margin-bottom: auto;
+.status-filter > p {
+  width: 100px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.status-filter>.selectWrapper>select{
-    background-color: #EAF9FF;
-    border: none;
-   margin-left: 10px;
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 25px;
-font-size: medium;
-color: black;
+.status-filter > .selectWrapper > select {
+  background-color: #eaf9ff;
+  border: none;
+  margin-left: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+  font-size: medium;
+  color: black;
 }
 
-.status-filter>.selectWrapper{
-    padding: 0;
-    margin: 0;
+.status-filter > .selectWrapper {
+  padding: 0;
+  margin: 0;
 }

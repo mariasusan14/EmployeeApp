@@ -23,11 +23,12 @@ export const Login = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (password.length < 10) {
+    if (password.length < 8) {
       setPasswordError("Must be 8 characters Long");
     } else {
       setPasswordError("");
     }
+    
   }, [password]); 
 
   useEffect(() => {
@@ -49,7 +50,7 @@ login({email:userName,password:password})
 .unwrap()
 .then((response)=>{
   if(!response)
-    throw new Error("No token")
+    throw new Error("Response not found")
 localStorage.setItem("token",response.accessToken)
 localStorage.setItem("isLoggedIn","true")
 navigate("/employee");

@@ -77,7 +77,9 @@ export const Form = ({
         houseNo: values.address.houseNo,
         pincode: parseInt(values.address.pincode),
       },
-    });
+    }).unwrap().then(()=>{alert("employee Created successfully")}).catch((error)=>{
+  alert("Employee Creation Failed") 
+});
     navigate(-1);
     //   dispatch(addEmployee({name:values.name,
     //   experience:parseInt(values.experience),
@@ -97,9 +99,9 @@ export const Form = ({
     // }}));
   }
 
-  async function handleFormEditClick() {
+   function handleFormEditClick() {
     console.log("create");
-    await updateEmployee({
+     updateEmployee({
       id: values.id,
       emp_id: values.empId,
       name: values.name,

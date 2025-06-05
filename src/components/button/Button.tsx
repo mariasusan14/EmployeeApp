@@ -21,7 +21,7 @@ export const Button = ({
       disabled={disabled}
       type={type}
     >
-      { title}
+      {title}
     </button>
   );
 };
