@@ -167,12 +167,14 @@ export const Form = ({
             tag="Address"
             type="text"
             name="Address"
+            inputWrapperVariant="address"
             placeholder="House No."
             value={values.address.houseNo}
             onChange={(event) => onChange("houseNo", event.target.value)}
           />
           <Input
             type="text"
+            inputWrapperVariant="address"
             name="Address"
             placeholder="Line1"
             value={values.address.line1}
@@ -180,6 +182,7 @@ export const Form = ({
           />
           <Input
             type="text"
+            inputWrapperVariant="address"
             name="Address"
             placeholder="Line 2"
             value={values.address.line2}
@@ -187,6 +190,7 @@ export const Form = ({
           />
           <Input
             type="text"
+            inputWrapperVariant="address"
             name="Address"
             placeholder="Pincode"
             value={values.address.pincode}

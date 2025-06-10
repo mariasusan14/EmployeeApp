@@ -4,10 +4,8 @@ import "./DeleteEmployee.css";
 export const DeleteEmployee = () => {
   return (
     <>
-      <DeletePopup />
-     
-      <EmployeeList />
-      
+      {/* <DeletePopup /> */}
+       
     </>
   );
 };

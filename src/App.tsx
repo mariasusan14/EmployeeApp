@@ -1,6 +1,6 @@
 import "./App.css";
 import { CreateEmployee } from "./pages/createEmployee/CreateEmployee";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import NotFound from "./pages/notFound/NotFound";
 import { Layout } from "./components/layout/Layout";
@@ -9,14 +9,20 @@ import { DeleteEmployee } from "./pages/deleteEmployee/DeleteEmployee";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import { Login } from "./pages/login/Login";
+import { Profile } from "./pages/profile/Profile";
 const EmployeeList = lazy(() => import("./pages/employeeList/EmployeeList"));
 const EditEmployee = lazy(() => import("./pages/editEmployee/EditEmployee"));
 
 function App() {
+
+    function isLoggedIn(){
+    if(localStorage.getItem("isLoggedIn")==="true") return true;
+    else return false;
+  }
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Login />,
+      element:isLoggedIn()?<Navigate to={"/employee"}/>: <Login />,
     },
     {
       path: "/employee",
@@ -30,6 +36,7 @@ function App() {
             </Suspense>
           ),
         },
+        { path: "profile", element: <Profile /> },
         { path: "create", element: <CreateEmployee /> },
         { path: "details/:id", element: <EmployeeDetails /> },
         {
@@ -40,7 +47,7 @@ function App() {
             </Suspense>
           ),
         },
-        { path: "delete/:id", element: <DeleteEmployee /> },
+        { path: "delete", element: <DeleteEmployee /> },
       ],
     },
     {

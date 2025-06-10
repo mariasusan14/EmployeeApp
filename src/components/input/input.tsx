@@ -9,6 +9,7 @@ export const Input = ({
   onChange,
   endAdornment,
   className,
+  inputWrapperVariant,
   id,
   checked,
   disabled=false,
@@ -20,6 +21,7 @@ export const Input = ({
   name?: string;
   placeholder?: string;
   value?: string;
+  inputWrapperVariant?:string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   ref?:React.RefObject<HTMLInputElement | null>;
   endAdornment?:React.ReactNode;
@@ -31,7 +33,7 @@ export const Input = ({
 }) => {
   return (
     
-      <div className="inputWrapper">
+      <div className={`inputWrapper ${inputWrapperVariant}`}>
       {tag && <label>{tag}</label>}
       <div className="wrapper">
       <input
@@ -47,6 +49,7 @@ export const Input = ({
         checked={checked}
         disabled={disabled}
         required
+        min={0}
       />
    
       {endAdornment && endAdornment}

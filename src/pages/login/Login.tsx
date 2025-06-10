@@ -55,8 +55,8 @@ localStorage.setItem("token",response.accessToken)
 localStorage.setItem("isLoggedIn","true")
 navigate("/employee");
 })
-.catch((error)=>{
-  setError(error.data.error) 
+.catch(()=>{
+  setError("Invalid Credentials") 
 })
     
   }

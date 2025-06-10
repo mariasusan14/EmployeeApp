@@ -7,6 +7,7 @@ import "./EmployeeDetails.css";
 //import { useSelector } from "react-redux";
 //import type { EmployeeState } from "../../store/employee/employee.types";
 import { useGetEmployeeByIdQuery } from "../../api-service/employees/employees.api";
+import { ErrorCard } from "../../components/errorCard/ErrorCard";
 
 export const EmployeeDetails = () => {
   const { id } = useParams();
@@ -20,27 +21,35 @@ export const EmployeeDetails = () => {
 
   return (
     <>
-      <Card>
-        <Header
-          title="Employee Details"
-          className="createEmployee"
-          endAdornment={
-            <div className="endadornment">
-              <div className="create-emp-nav" onClick={handleNavigationToEdit}>
-                <div className="emp-nav-btn">
-                  <i
-                    className="fa fa-pencil"
-                    style={{ fontSize: "25px", margin: "0%" }}
-                  ></i>
+      {employee ? (
+        <Card>
+          <Header
+            title="Employee Details"
+            className="createEmployee"
+            endAdornment={
+              <div className="endadornment">
+                <div
+                  className="create-emp-nav"
+                  onClick={handleNavigationToEdit}
+                >
+                  <div className="emp-nav-btn">
+                    <i
+                      className="fa fa-pencil"
+                      style={{ fontSize: "25px", margin: "0%" }}
+                    ></i>
+                  </div>
+                  <p>Edit</p>
                 </div>
-                <p>Edit</p>
               </div>
-            </div>
-          }
-        />
-
-        {employee && <DetailsCard employee={employee} />}
-      </Card>
+            }
+          />
+          <DetailsCard employee={employee} />
+        </Card>
+      ) : (
+        <Card>
+        <ErrorCard errorMsg="Employee Not Found" />
+        </Card>
+      )}
     </>
   );
 };

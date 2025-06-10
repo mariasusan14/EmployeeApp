@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Button } from "../button/Button";
 import "./DeletePopup.css";
 import { useDeleteEmployeeMutation } from "../../api-service/employees/employees.api";
@@ -7,20 +7,20 @@ import { useDeleteEmployeeMutation } from "../../api-service/employees/employees
 // import { useAppDispatch } from "../../store/store";
 // import { deleteEmployee } from "../../store/employee/employeeReducer";
 
-export const DeletePopup = () => {
-  const { id } = useParams();
-  const navigate = useNavigate();
+export const DeletePopup = ({id,setPopupState}:{id:number|undefined;setPopupState:(toggleState:boolean)=>void}) => {
+ 
   const [deleteEmployee]=useDeleteEmployeeMutation();
   //const dispatch = useAppDispatch();
   function handleCancel() {
-    navigate(-1);
+    setPopupState(false)
+    //navigate(-1);
   }
 
   function handleDelete() {
     deleteEmployee(id);
+    setPopupState(false)
     //dispatch(deleteEmployee(id));
     console.log(`employee id:${id} deleted`);
-    navigate(-1);
   }
   return (
     <div className="delete-popup-container">
